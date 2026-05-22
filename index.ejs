@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Generator with History</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>✨ Quote Generator</h1>
+
+    <div class="quote-box">
+        <p class="quote">“<%= quote %>”</p>
+        <h3>- <%= author %></h3>
+
+        <a href="/">
+            <button>Generate New Quote</button>
+        </a>
+    </div>
+
+    <div class="history">
+        <h2>Quote History</h2>
+
+        <% history.forEach(item => { %>
+            <div class="history-card">
+                <p>“<%= item.quote %>”</p>
+                <span>- <%= item.author %></span>
+            </div>
+        <% }) %>
+
+    </div>
+
+</div>
+
+</body>
+</html>
